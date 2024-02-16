@@ -4,11 +4,12 @@
     font-size: 4rem;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 .display_flex {
     display: flex;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 }
 
 .order_right {
@@ -78,3 +79,31 @@
     height: 6.5rem;
     margin-left: 1rem;
 }
+
+/* スクロールCSS */
+.fade-in {
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+  }
+  
+  .fade-in-up {
+    transform: translate(0, 50px);
+  }
+  
+  .fade-in-down {
+    transform: translate(0, -50px);
+  }
+  
+  .fade-in-left {
+    transform: translate(-50px, 0);
+  }
+  
+  .fade-in-right {
+    transform: translate(50px, 0);
+  }
+  
+  .scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
