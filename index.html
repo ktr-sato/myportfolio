@@ -1,234 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEMO SITE</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./common.css">
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sample</title>
 </head>
 <body>
+  <div id="app">
+    <p>
+      <span>大きさ :</span>
+      <input v-model="range" type="range" max="500" min="10">
+    </p>
+    <p>
+      <span>赤 :</span>
+      <input v-model="red" type="range" max="255" min="0">
+    </p>
+    <p>
+      <span>緑 :</span>
+      <input v-model="green" type="range" max="255" min="0">
+    </p>
+    <p>
+      <span>青 :</span>
+      <input v-model="blue" type="range" max="255" min="0">
+    </p>
+    <div :style="bindStyle"></div>
 
-    <p class="title">DEMO SITE</p>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE
-        </div>
-        <div class="txt_area order_left">
-            TXT AREA
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT
-            </div>
-        </div>
-        <div class="img_area order_right">
-            IMG AREA
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG
-            </div>
-        </div>
-    </div>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE2
-        </div>
-        <div class="txt_area order_right">
-            TXT AREA2
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT2
-            </div>
-        </div>
-        <div class="img_area order_left">
-            IMG AREA2
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG2
-            </div>
-        </div>
-    </div>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE
-        </div>
-        <div class="txt_area order_left">
-            TXT AREA
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT
-            </div>
-        </div>
-        <div class="img_area order_right">
-            IMG AREA
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG
-            </div>
-        </div>
-    </div>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE2
-        </div>
-        <div class="txt_area order_right">
-            TXT AREA2
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT2
-            </div>
-        </div>
-        <div class="img_area order_left">
-            IMG AREA2
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG2
-            </div>
-        </div>
-    </div>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE
-        </div>
-        <div class="txt_area order_left">
-            TXT AREA
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT
-            </div>
-        </div>
-        <div class="img_area order_right">
-            IMG AREA
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG
-            </div>
-        </div>
-    </div>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE2
-        </div>
-        <div class="txt_area order_right">
-            TXT AREA2
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT2
-            </div>
-        </div>
-        <div class="img_area order_left">
-            IMG AREA2
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG2
-            </div>
-        </div>
-    </div>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE
-        </div>
-        <div class="txt_area order_left">
-            TXT AREA
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT
-            </div>
-        </div>
-        <div class="img_area order_right">
-            IMG AREA
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG
-            </div>
-        </div>
-    </div>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE2
-        </div>
-        <div class="txt_area order_right">
-            TXT AREA2
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT2
-            </div>
-        </div>
-        <div class="img_area order_left">
-            IMG AREA2
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG2
-            </div>
-        </div>
-    </div>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE
-        </div>
-        <div class="txt_area order_left">
-            TXT AREA
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT
-            </div>
-        </div>
-        <div class="img_area order_right">
-            IMG AREA
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG
-            </div>
-        </div>
-    </div>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE2
-        </div>
-        <div class="txt_area order_right">
-            TXT AREA2
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT2
-            </div>
-        </div>
-        <div class="img_area order_left">
-            IMG AREA2
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG2
-            </div>
-        </div>
-    </div>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE
-        </div>
-        <div class="txt_area order_left">
-            TXT AREA
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT
-            </div>
-        </div>
-        <div class="img_area order_right">
-            IMG AREA
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG
-            </div>
-        </div>
-    </div>
-
-    <div class="display_flex">
-        <div class="center_circle">
-            CENTER CIRCLE2
-        </div>
-        <div class="txt_area order_right">
-            TXT AREA2
-            <div class="real_txt_area fade-in fade-in-up">
-                REAL TXT2
-            </div>
-        </div>
-        <div class="img_area order_left">
-            IMG AREA2
-            <div class="real_img_area fade-in fade-in-up">
-                REAL IMG2
-            </div>
-        </div>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./js/demo.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+  <script src="./script/script.js"></script>
 </body>
 </html>
